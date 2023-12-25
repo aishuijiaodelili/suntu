@@ -1,0 +1,91 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+
+    >
+
+    <!-- 歌曲标题 -->
+
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivAlbumCover"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="161dp"
+        android:contentDescription="封面"
+        android:onClick="onImageViewClick"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ljj"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/tvSongTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="53dp"
+        android:text="歌曲标题"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:layout_width="395dp"
+        android:layout_height="168dp"
+        android:layout_below="@id/tvSongTitle"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="22dp"
+        android:orientation="vertical">
+
+        <!-- 歌曲进度条 -->
+
+        <!-- 控制按钮区域 -->
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center">
+
+            <!-- 上一曲按钮 -->
+            <ImageButton
+                android:id="@+id/btnPrevious"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:contentDescription="上一曲"
+                android:src="@drawable/ic_previous" />
+
+            <!-- 播放/暂停按钮 -->
+            <ImageButton
+                android:id="@+id/btnPlayPause"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:background="?android:selectableItemBackgroundBorderless"
+                android:contentDescription="开始暂停"
+                android:src="@drawable/ic_play" />
+
+            <!-- 下一曲按钮 -->
+            <ImageButton
+                android:id="@+id/btnNext"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:contentDescription="下一曲"
+                android:src="@drawable/ic_next" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
